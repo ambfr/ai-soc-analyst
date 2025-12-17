@@ -28,7 +28,10 @@ cd AI-SOC-Analyst
 pip install -r requirements.txt
 ```
 
-3. Make sure you have the GPT-2 model downloaded locally and update the `MODEL_PATH` in `app.py` or `llm_analyzer.py` if needed:
+3. Make sure you have the GPT-2 model downloaded locally
+   [ the main 4 files include config.json, merges.txt, model.safetensors, tokenizer.json, and vocab.json which you can download from [hugging face](https://huggingface.co/openai-community/gpt2) from the *files and versions* tab]
+
+update the `MODEL_PATH` in `app.py` or `llm_analyzer.py` if needed:
 
 ```python
 MODEL_PATH = r"C:\Users\asgaj\models\gpt2"  # Change this path if your model is elsewhere
