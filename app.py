@@ -1,5 +1,5 @@
 import streamlit as st
-
+from analyzer.log_parser import parse_logs, detect_bruteforce
 st.set_page_config(
     page_title="AI SOC Analyst",
     page_icon="🛡️",
@@ -32,5 +32,16 @@ if uploaded_file:
     with st.expander("📄 View Raw Logs"):
         st.text(logs)
 
-    if st.button("🔍 Analyze Logs"):
-        st.info("Analysis engine coming next... 🚀")
+    
+
+if st.button("🔍 Analyze Logs"):
+    ip_attempts = parse_logs(logs)
+    suspicious_ips = detect_bruteforce(ip_attempts)
+
+    if suspicious_ips:
+        st.error("⚠️ Suspicious activity detected!")
+        for ip, count in suspicious_ips.items():
+             st.write(f"🔴 IP `{ip}` had `{count}` failed login attempts")
+
+    else:
+            st.success("✅ No suspicious activity detected.")
