@@ -73,5 +73,5 @@ Here’s how the AI SOC Analyst app looks:
 
 This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
-one who clones your repo can run it without issues. Do you want me to do that?
+
 
