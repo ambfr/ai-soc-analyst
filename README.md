@@ -18,7 +18,7 @@ AI SOC Analyst is a Streamlit app that uses **GPT-2** to analyze log files, dete
 
 1. Clone the repository:  
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/ambfr/ai-soc-analyst.git
 cd AI-SOC-Analyst
 ````
 
